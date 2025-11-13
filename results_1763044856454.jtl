@@ -1,0 +1,11 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1763044858315,1603,HTTP Request,200,OK,Thread Group 1-1,text,true,,3311,130,1,1,https://sampleapis.com/api-list/beers,1593,0,781
+1763044859921,265,HTTP Request,200,OK,Thread Group 1-1,text,true,,3313,130,1,1,https://sampleapis.com/api-list/beers,262,0,0
+1763044860194,263,HTTP Request,200,OK,Thread Group 1-1,text,true,,3307,130,1,1,https://sampleapis.com/api-list/beers,262,0,0
+1763044860458,270,HTTP Request,200,OK,Thread Group 1-1,text,true,,3311,130,1,1,https://sampleapis.com/api-list/beers,267,0,0
+1763044860730,271,HTTP Request,200,OK,Thread Group 1-1,text,true,,3307,130,1,1,https://sampleapis.com/api-list/beers,269,0,0
+1763044861004,878,HTTP Request,200,OK,Thread Group 1-1,text,true,,3309,130,1,1,https://sampleapis.com/api-list/beers,874,0,0
+1763044861884,278,HTTP Request,200,OK,Thread Group 1-1,text,true,,3305,130,1,1,https://sampleapis.com/api-list/beers,275,0,0
+1763044862163,258,HTTP Request,200,OK,Thread Group 1-1,text,true,,3309,130,1,1,https://sampleapis.com/api-list/beers,256,0,0
+1763044862424,777,HTTP Request,200,OK,Thread Group 1-1,text,true,,3307,130,1,1,https://sampleapis.com/api-list/beers,776,0,0
+1763044863201,286,HTTP Request,200,OK,Thread Group 1-1,text,true,,3311,130,1,1,https://sampleapis.com/api-list/beers,285,0,0
