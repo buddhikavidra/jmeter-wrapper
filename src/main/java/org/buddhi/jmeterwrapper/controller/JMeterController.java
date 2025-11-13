@@ -2,6 +2,9 @@ package org.buddhi.jmeterwrapper.controller;
 
 import org.springframework.web.bind.annotation.*;
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.*;
 
 @RestController
@@ -24,8 +27,23 @@ public class JMeterController {
             }
 
             // Command to start test
+//            ProcessBuilder pb = new ProcessBuilder(
+//                    jmeterPath, "-n", "-t", file.getAbsolutePath(), "-l", "results_" + System.currentTimeMillis() + ".jtl"
+//            );
+            Path resultsDir = Paths.get("/home/buddhi/IdeaProjects/jmeter-wrapper/src/main/resources/result");
+            Files.createDirectories(resultsDir); // Ensure the directory exists
+
+            String timestamp = String.valueOf(System.currentTimeMillis());
+            Path resultPath = resultsDir.resolve("results_" + timestamp + ".jtl");
+            Path reportDir = resultsDir.resolve("html_report_" + timestamp);
+
             ProcessBuilder pb = new ProcessBuilder(
-                    jmeterPath, "-n", "-t", file.getAbsolutePath(), "-l", "results_" + System.currentTimeMillis() + ".jtl"
+                    jmeterPath,
+                    "-n",
+                    "-t", file.getAbsolutePath(),
+                    "-l", resultPath.toString(),
+                    "-e",
+                    "-o", reportDir.toString()
             );
 
             pb.redirectErrorStream(true);
