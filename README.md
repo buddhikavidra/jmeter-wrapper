@@ -1,1 +1,1 @@
-curl -X POST "http://localhost:8080/api/start-test"      -H "Content-Type: application/x-www-form-urlencoded"      -d "jmxPath=/home/buddhi/IdeaProjects/jmeter-wrapper/src/main/resources/jmxfiles/HTTPRequest.jmx"
+curl -X POST "http://localhost:8080/api/start-test"   -H "Content-Type: application/x-www-form-urlencoded"   -d "jmxPath=/home/buddhi/IdeaProjects/jmeter-wrapper/src/main/resources/jmxfiles/HTTPRequest.jmx"   -d "testName=MyPerformanceTest"
