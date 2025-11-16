@@ -3,7 +3,6 @@ package org.buddhi.jmeterwrapper.service;
 import org.buddhi.jmeterwrapper.model.TestExecution;
 import org.buddhi.jmeterwrapper.repository.TestExecutionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.io.*;
@@ -63,9 +62,8 @@ public class JMeterService {
                 response.put("error", "JMX file not found: " + jmxPath);
                 return response;
             }
-
             // Create results directory
-            Path resultsDir = Paths.get("target/jmeter-results");
+            Path resultsDir = Paths.get("testResults/jmeter-results");
             Files.createDirectories(resultsDir);
 
             String timestamp = String.valueOf(System.currentTimeMillis());
