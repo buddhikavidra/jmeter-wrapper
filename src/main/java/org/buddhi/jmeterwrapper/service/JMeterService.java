@@ -62,7 +62,6 @@ public class JMeterService {
                 response.put("error", "JMX file not found: " + jmxPath);
                 return response;
             }
-
             // Create results directory
             Path resultsDir = Paths.get("testResults/jmeter-results");
             Files.createDirectories(resultsDir);
