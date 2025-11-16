@@ -5,6 +5,7 @@ import org.buddhi.jmeterwrapper.service.JMeterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.File;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -93,6 +94,7 @@ public class JMeterController {
             if (execution.isPresent()) {
                 response.put("success", true);
                 response.put("execution", mapExecutionToResponse(execution.get()));
+                response.put("report",execution.get().getReportPath()+ File.separator + "index.html");
             } else {
                 response.put("success", false);
                 response.put("error", "Execution not found with id: " + id);
